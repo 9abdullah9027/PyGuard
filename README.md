@@ -1,11 +1,4 @@
-==============================================================================
 PROJECT: PyGuard - Interactive Security Laboratory
-==============================================================================
-
-[ DESCRIPTION ]
-PyGuard is an educational web application built with Python (Flask) designed to 
-demonstrate core cybersecurity concepts through interactive simulation.
-
 The application features three distinct modules:
 1. Social Engineering: A "Homograph Attack" simulator mimicking a Microsoft login.
 2. SQL Injection: A "Capture The Flag" (CTF) arena to practice database exploitation.
