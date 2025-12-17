@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <div class="card border-danger mb-3 mx-auto" style="max-width: 40rem;">
+        <div class="card-header bg-danger text-white"><h3>⚠️ YOU HAVE BEEN PHISHED!</h3></div>
+        <div class="card-body text-danger">
+            <h5 class="card-title">If this were a real attack, the hacker now has your credentials:</h5>
+            <div class="code-block text-start">
+                Captured Email: <span style="color: #ff5555">{{ user }}</span><br>
+                Captured Password: <span style="color: #ff5555">{{ pwd }}</span>
+            </div>
+            <p class="mt-3 text-dark">
+                <strong>Lesson:</strong> Always check the URL before typing your password. 
+                Real sites use HTTPS and correct domain names.
+            </p>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary mt-2">Back to Dashboard</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

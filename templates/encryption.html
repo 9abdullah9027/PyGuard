@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold"><i class="bi bi-safe2"></i> Encryption Playground</h2>
+        <p class="text-muted">Real-time AES-128 implementation demonstration.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                    <h4 class="text-primary"><i class="bi bi-lock-fill"></i> Encrypt</h4>
+                </div>
+                <div class="card-body px-4 pb-4">
+                    <form method="POST">
+                        <input type="hidden" name="action" value="encrypt">
+                        <div class="mb-3">
+                            <textarea name="text_input" class="form-control bg-light" rows="3" placeholder="Type a secret message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-shield-lock"></i> Encrypt Data
+                        </button>
+                    </form>
+                    
+                    {% if encrypted %}
+                    <div class="mt-4 p-3 bg-light rounded border">
+                        <label class="small text-muted text-uppercase fw-bold mb-2">Ciphertext Output</label>
+                        <div class="text-break font-monospace small text-primary">{{ encrypted }}</div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                    <h4 class="text-success"><i class="bi bi-unlock-fill"></i> Decrypt</h4>
+                </div>
+                <div class="card-body px-4 pb-4">
+                    <form method="POST">
+                        <input type="hidden" name="action" value="decrypt">
+                        <div class="mb-3">
+                            <textarea name="text_input" class="form-control bg-light" rows="3" placeholder="Paste the weird ciphertext here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="bi bi-shield-check"></i> Decrypt Data
+                        </button>
+                    </form>
+
+                    {% if decrypted %}
+                    <div class="mt-4 p-3 bg-success bg-opacity-10 rounded border border-success">
+                        <label class="small text-muted text-uppercase fw-bold mb-2">Decrypted Message</label>
+                        <div class="fw-bold text-success">{{ decrypted }}</div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
