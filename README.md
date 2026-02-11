@@ -43,6 +43,15 @@ The application features three distinct modules:
    - Type text to encrypt it using Fernet (AES).
    - Copy the ciphertext and decrypt it back to verify integrity.
 
+
+[ SCREENSHOTS ]
+<img width="1913" height="1047" alt="image" src="https://github.com/user-attachments/assets/44674256-e74f-4d1a-b7cc-7b5c7362d356" />
+<img width="1916" height="1068" alt="image" src="https://github.com/user-attachments/assets/af28885e-433c-4d91-a3c5-c2a20ac3bf27" />
+<img width="1916" height="1060" alt="image" src="https://github.com/user-attachments/assets/abbfd4b7-0fad-4f0b-96b1-f4d21c979e9b" />
+<img width="1919" height="1063" alt="image" src="https://github.com/user-attachments/assets/524146d3-920b-47c1-b697-512b7877955e" />
+<img width="1919" height="1051" alt="image" src="https://github.com/user-attachments/assets/a1ccb2ed-b473-4c71-b20d-e3eced424844" />
+
+
 [ TECH STACK ]
 - Backend: Python 3, Flask
 - Database: SQLite3
